@@ -6,56 +6,8 @@
     <title>Your Project</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-      /* Custom styles for the accordion */
-      .accordion-item {
-        border-bottom: 1px solid #e5e7eb;
-      }
-      .accordion-item:last-child {
-        border-bottom: none;
-      }
-      .accordion-trigger {
-        cursor: pointer;
-      }
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-      }
-      .accordion-item.open .accordion-content {
-        max-height: 1000px; /* Adjust this value to fit your content */
-        transition: max-height 0.3s ease-in;
-      }
-    </style>
   </head>
   <body>
-    <!-- <div class="container"> -->
-    <!-- <nav
-      class="bg-purple-700 flex items-center justify-between px-20 py-6 h-20"
-    >
-      <img src="images/White Logo.png" class="w-60 h-9" />
-      <div class="menu-toggle md:hidden">
-        
-        <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
-      </div>
-      <ul class="menu hidden md:flex space-x-7">
-        <li class="text-white font-inter font-medium text-base leading-4">
-          <a href="#">SERVICES</a>
-        </li>
-        <li class="text-white font-inter font-medium text-base leading-4">
-          <a href="#">ABOUT US</a>
-        </li>
-        <li class="text-white font-inter font-medium text-base leading-4">
-          <a href="#">CONTACT US</a>
-        </li>
-        <li class="text-white font-inter font-medium text-base leading-4">
-          <a href="#">CAREERS</a>
-        </li>
-      </ul>
-    </nav> -->
-    <!-- </div> -->
-
     <nav class="navbar bg-purple-700">
       <div
         class="container mx-auto flex justify-between items-center px-4 md:px-20 py-6 h-20"
@@ -87,29 +39,6 @@
       </ul>
     </div>
 
-    <!-- <div class="relative textBox">
-      <div
-        class="bg-cover bg-no-repeat bg-center w-full h-[700px]"
-        style="background-image: url('images/Hero\ Image.png')"
-      >
-        <div
-          class="absolute bottom-10 left-20 px-10 py-7 max-w-xl bg-gradient-to-r from-green-500 to-blue-500"
-        > -->
-    <!-- Text content -->
-    <!-- <h2 class="text-white text-4xl font-bold mb-4">
-            We crush your competitors, goals, and sales records - without the
-            B.S.
-          </h2> -->
-    <!-- Button -->
-    <!-- <button
-            class="w-56 h-9 gap-2 rounded-md bg-orange-500 text-sm text-white"
-          >
-            GET FREE CONSULTATION
-          </button>
-        </div>
-      </div>
-    </div> -->
-
     <div class="relative textBox-lg hidden md:block">
       <div
         class="bg-cover bg-no-repeat bg-center w-full h-[700px]"
@@ -137,9 +66,7 @@
       <div
         class="bg-cover bg-no-repeat bg-center w-full h-[200px]"
         style="background-image: url('images/Hero\ Image.png')"
-      >
-        <!-- Background image only, no absolute content for smaller screens -->
-      </div>
+      ></div>
       <div
         class="bottom-10 left-20 px-10 py-7 max-w-xl bg-gradient-to-r from-green-500 to-blue-500"
       >
@@ -220,56 +147,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div
-      class="flex flex-col justify-center justify-items-center max-w-4xl mx-60 mb-10"
-    >
-      <h1
-        class="font-poppins font-semibold text-purple-700 text-2xl text-center mb-7"
-      >
-        Frequently asked questions
-      </h1>
-      <div>
-        <div class="gap-10 mb-4 bg-purple-100">
-          <div class="flex gap-10">
-            <div class="font-Inter font-medium text-purple-700 text-xl">
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?
-              </p>
-            </div>
-            <div><p class="text-purple-700 font-medium">-</p></div>
-          </div>
-          <div>
-            <p class="font-poppins text-lg text-purple-700 font-normal">
-              Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit
-              id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam.
-              Sapien massa morbi risus sagittis tortor integer.
-            </p>
-          </div>
-        </div>
-        <div class="mb-4 bg-purple-100">
-          <div class="flex gap-10">
-            <div class="font-Inter font-medium text-xl">
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?
-              </p>
-            </div>
-            <div><p class="font-medium">+</p></div>
-          </div>
-        </div>
-        <div>
-          <div class="flex gap-10 bg-purple-100 h-20 my-auto">
-            <div class="font-Inter font-medium text-xl">
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque
-                nunc?
-              </p>
-            </div>
-            <div><p class="font-medium">+</p></div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <!-- accordinan -->
     <div class="container mx-auto py-8">
@@ -386,7 +263,7 @@
           <div class="mb-5">
             <img src="images/White Logo.png " class="w-56 h-6" />
           </div>
-          <div>
+          <div class="footer-text">
             <p class="text-sm">
               Your goal is our target. Not anything in between. We use online
               marketing platforms and tools to achieve single objective - your
@@ -471,6 +348,8 @@
         });
       });
     </script>
+
+    <!-- Hamburger menu-->
     <script>
       // Toggle menu function
       function toggleMenu() {

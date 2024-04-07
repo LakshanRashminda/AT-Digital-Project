@@ -4,25 +4,25 @@
 /* Responsive styles for 1440px */
 @media (max-width: 1440px) {
   .app-dev {
-    max-width: 1064px; /* Adjust as needed */
+    max-width: 1064px;
   }
 }
 /* Responsive styles for 1200px */
 @media (max-width: 1200px) {
   .app-dev {
-    max-width: 896px; /* Adjust as needed */
+    max-width: 896px;
   }
 }
 /* Responsive styles for 768px */
 @media (max-width: 768px) {
   .app-dev {
-    max-width: 688px; /* Adjust as needed */
+    max-width: 688px;
   }
 }
 /* Responsive styles for 375px */
 @media (max-width: 375px) {
   .app-dev {
-    max-width: 335px; /* Adjust as needed */
+    max-width: 335px;
     text-align: center;
   }
 }
@@ -34,28 +34,28 @@
 /* Responsive styles for 1440px */
 @media (max-width: 1440px) {
   .app-dev-2 {
-    max-width: 1064px; /* Adjust as needed */
+    max-width: 1064px;
   }
 }
 
 /* Responsive styles for 1200px */
 @media (max-width: 1200px) {
   .app-dev-2 {
-    max-width: 896px; /* Adjust as needed */
+    max-width: 896px;
   }
 }
 
 /* Responsive styles for 768px */
 @media (max-width: 768px) {
   .app-dev-2 {
-    max-width: 688px; /* Adjust as needed */
+    max-width: 688px;
   }
 }
 
 /* Responsive styles for 375px */
 @media (max-width: 375px) {
   .app-dev-2 {
-    max-width: 335px; /* Adjust as needed */
+    max-width: 335px;
     text-align: center;
   }
 }
@@ -129,7 +129,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  z-index: 1000; /* Ensure the menu appears on top of other content */
+  z-index: 1000;
   transform: translateX(100%);
   transition: transform 0.3s ease;
 }
@@ -169,19 +169,7 @@
 .textBox {
   position: relative;
 }
-/* Media query for screens smaller than 768px */
-/* @media (max-width: 767px) {
-  .textBox .absolute {
-    position: static;
-    max-width: 100%;
-  }
 
-  .textBox h2,
-  .textBox button {
-    display: block;
-    width: 100%;
-  }
-} */
 @media (max-width: 767px) {
   .textBox .absolute {
     position: static;
@@ -191,29 +179,74 @@
 }
 
 .hr-line {
-  /* Your default styles for the class */
 }
 /* Responsive styles for 1440px */
 @media (max-width: 1440px) {
   .hr-line {
-    max-width: 630px; /* Adjust as needed */
+    max-width: 630px;
   }
 }
 /* Responsive styles for 1200px */
 @media (max-width: 1200px) {
   .hr-line {
-    max-width: 630px; /* Adjust as needed */
+    max-width: 630px;
   }
 }
 /* Responsive styles for 768px */
 @media (max-width: 768px) {
   .hr-line {
-    max-width: 630px; /* Adjust as needed */
+    max-width: 630px;
   }
 }
 /* Responsive styles for 375px */
 @media (max-width: 375px) {
   .hr-line {
-    max-width: 335px; /* Adjust as needed */
+    max-width: 335px;
+  }
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+.accordion-item:last-child {
+  border-bottom: none;
+}
+.accordion-trigger {
+  cursor: pointer;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item.open .accordion-content {
+  max-height: 1000px;
+  transition: max-height 0.3s ease-in;
+}
+
+.footer-text {
+}
+/* Responsive styles for 1440px */
+@media (max-width: 1440px) {
+  .footer-text {
+    max-width: 420px;
+  }
+}
+/* Responsive styles for 1200px */
+@media (max-width: 1200px) {
+  .footer-text {
+    max-width: 420px;
+  }
+}
+/* Responsive styles for 768px */
+@media (max-width: 768px) {
+  .footer-text {
+    max-width: 420px;
+  }
+}
+/* Responsive styles for 375px */
+@media (max-width: 375px) {
+  .footer-text {
+    max-width: 350px;
   }
 }
