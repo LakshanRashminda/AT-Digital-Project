@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Custom styles for the accordion */
+      .accordion-item {
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .accordion-item:last-child {
+        border-bottom: none;
+      }
+      .accordion-trigger {
+        cursor: pointer;
+      }
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      .accordion-item.open .accordion-content {
+        max-height: 1000px; /* Adjust this value to fit your content */
+        transition: max-height 0.3s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+    <!-- <nav
+      class="bg-purple-700 flex items-center justify-between px-20 py-6 h-20"
+    >
+      <img src="images/White Logo.png" class="w-60 h-9" />
+      <div class="menu-toggle md:hidden">
+        
+        <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+      </div>
+      <ul class="menu hidden md:flex space-x-7">
+        <li class="text-white font-inter font-medium text-base leading-4">
+          <a href="#">SERVICES</a>
+        </li>
+        <li class="text-white font-inter font-medium text-base leading-4">
+          <a href="#">ABOUT US</a>
+        </li>
+        <li class="text-white font-inter font-medium text-base leading-4">
+          <a href="#">CONTACT US</a>
+        </li>
+        <li class="text-white font-inter font-medium text-base leading-4">
+          <a href="#">CAREERS</a>
+        </li>
+      </ul>
+    </nav> -->
+    <!-- </div> -->
+
+    <nav class="navbar bg-purple-700">
+      <div
+        class="container mx-auto flex justify-between items-center px-4 md:px-20 py-6 h-20"
+      >
+        <img src="images/White Logo.png" class="w-60 h-9" />
+        <div class="menu-toggle md:hidden">
+          <!-- Hamburger menu icon -->
+          <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+        </div>
+        <ul class="menu hidden md:flex space-x-7">
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">CAREERS</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hidden overlay menu -->
+    <div class="overlay-menu">
+      <!-- Close button -->
+      <button class="close-btn" aria-label="Close Menu">&times;</button>
+      <!-- Menu items -->
+      <ul>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTACT US</a></li>
+        <li><a href="#">CAREERS</a></li>
+      </ul>
+    </div>
+
+    <!-- <div class="relative textBox">
+      <div
+        class="bg-cover bg-no-repeat bg-center w-full h-[700px]"
+        style="background-image: url('images/Hero\ Image.png')"
+      >
+        <div
+          class="absolute bottom-10 left-20 px-10 py-7 max-w-xl bg-gradient-to-r from-green-500 to-blue-500"
+        > -->
+    <!-- Text content -->
+    <!-- <h2 class="text-white text-4xl font-bold mb-4">
+            We crush your competitors, goals, and sales records - without the
+            B.S.
+          </h2> -->
+    <!-- Button -->
+    <!-- <button
+            class="w-56 h-9 gap-2 rounded-md bg-orange-500 text-sm text-white"
+          >
+            GET FREE CONSULTATION
+          </button>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="relative textBox-lg hidden md:block">
+      <div
+        class="bg-cover bg-no-repeat bg-center w-full h-[700px]"
+        style="background-image: url('images/Hero\ Image.png')"
+      >
+        <div
+          class="absolute bottom-10 left-20 px-10 py-7 max-w-xl bg-gradient-to-r from-green-500 to-blue-500"
+        >
+          <!-- Text content -->
+          <h2 class="text-white text-4xl font-bold mb-4">
+            We crush your competitors, goals, and sales records - without the
+            B.S.
+          </h2>
+          <!-- Button -->
+          <button
+            class="w-56 h-9 gap-2 rounded-md bg-orange-500 text-sm text-white"
+          >
+            GET FREE CONSULTATION
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative textBox-sm md:hidden">
+      <div
+        class="bg-cover bg-no-repeat bg-center w-full h-[200px]"
+        style="background-image: url('images/Hero\ Image.png')"
+      >
+        <!-- Background image only, no absolute content for smaller screens -->
+      </div>
+      <div
+        class="bottom-10 left-20 px-10 py-7 max-w-xl bg-gradient-to-r from-green-500 to-blue-500"
+      >
+        <!-- Text content -->
+        <h2 class="text-white text-4xl font-bold mb-4">
+          We crush your competitors, goals, and sales records - without the B.S.
+        </h2>
+        <!-- Button -->
+        <button
+          class="w-56 h-9 gap-2 rounded-md bg-orange-500 text-sm text-white"
+        >
+          GET FREE CONSULTATION
+        </button>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-28 app-dev">
+      <div class="grid grid-cols-2 gap-4 justify-center w-full">
+        <div class="col-span-2 md:col-span-1">
+          <img src="images/image 2.png" class="w-auto" />
+        </div>
+        <div
+          class="flex flex-col justify-center gap-5 col-span-2 md:col-span-1"
+        >
+          <h1
+            class="justify-center font-poppins text-2xl font-semibold leading-9 tracking-wide text-purple-700"
+          >
+            Web & Mobile App Development
+          </h1>
+          <div class="font-Inter text-base font-normal">
+            <p>
+              Your web and mobile Apps are pieces of the puzzle to grow your
+              business. We use frameworks which tailor content and engagement
+              methods to respond to different intents shown by your potential
+              customers who interact with your business online.
+            </p>
+          </div>
+          <div>
+            <button
+              class="w-32 h-10 px-5 py-3 gap-2 rounded-md bg-orange-500 text-sm text-white"
+            >
+              LEARN MORE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-28 app-dev-2">
+      <div class="grid grid-cols-2 gap-4 justify-center w-full">
+        <div
+          class="flex flex-col justify-center gap-5 col-span-2 md:col-span-1"
+        >
+          <h1
+            class="justify-center font-poppins text-2xl font-semibold leading-9 tracking-wide text-purple-700"
+          >
+            Digital Strategy Consulting
+          </h1>
+          <div class="font-Inter text-base font-normal">
+            <p>
+              Your digital strategy should complement the overall marketing
+              strategy of the company. In online marketing, each component will
+              never work in isolation and every business needs a different mix.
+              We provide a clear concept and strategic overview to find the most
+              efficient model for your business.
+            </p>
+          </div>
+          <div>
+            <button
+              class="w-32 h-10 px-5 py-3 gap-2 rounded-md bg-orange-500 text-sm text-white"
+            >
+              LEARN MORE
+            </button>
+          </div>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <img src="images/image 1.png" class="w-auto" />
+        </div>
+      </div>
+    </div>
+
+    <!-- <div
+      class="flex flex-col justify-center justify-items-center max-w-4xl mx-60 mb-10"
+    >
+      <h1
+        class="font-poppins font-semibold text-purple-700 text-2xl text-center mb-7"
+      >
+        Frequently asked questions
+      </h1>
+      <div>
+        <div class="gap-10 mb-4 bg-purple-100">
+          <div class="flex gap-10">
+            <div class="font-Inter font-medium text-purple-700 text-xl">
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?
+              </p>
+            </div>
+            <div><p class="text-purple-700 font-medium">-</p></div>
+          </div>
+          <div>
+            <p class="font-poppins text-lg text-purple-700 font-normal">
+              Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit
+              id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam.
+              Sapien massa morbi risus sagittis tortor integer.
+            </p>
+          </div>
+        </div>
+        <div class="mb-4 bg-purple-100">
+          <div class="flex gap-10">
+            <div class="font-Inter font-medium text-xl">
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?
+              </p>
+            </div>
+            <div><p class="font-medium">+</p></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex gap-10 bg-purple-100 h-20 my-auto">
+            <div class="font-Inter font-medium text-xl">
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque
+                nunc?
+              </p>
+            </div>
+            <div><p class="font-medium">+</p></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- accordinan -->
+    <div class="container mx-auto py-8">
+      <h1 class="text-3xl font-semibold text-center mb-8 text-purple-700">
+        Frequently Asked Questions
+      </h1>
+      <div class="max-w-4xl mx-auto">
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item bg-white rounded-lg shadow-md mb-4">
+          <div
+            class="px-6 py-4 accordion-trigger flex justify-between items-center"
+          >
+            <h2 class="text-lg font-semibold accordion-title">
+              What is Tailwind CSS?
+            </h2>
+            <svg
+              class="w-6 h-6 toggle-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+          <div class="accordion-content bg-white">
+            <div class="px-6 py-4">
+              <p class="text-purple-700">
+                Tailwind CSS is a utility-first CSS framework that helps you
+                build custom designs without having to leave your HTML.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item bg-white rounded-lg shadow-md mb-4">
+          <div
+            class="px-6 py-4 accordion-trigger flex justify-between items-center"
+          >
+            <h2 class="text-lg font-semibold accordion-title">
+              How do I install Tailwind CSS?
+            </h2>
+            <svg
+              class="w-6 h-6 toggle-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+          <div class="accordion-content bg-white">
+            <div class="px-6 py-4">
+              <p class="text-purple-700">
+                You can install Tailwind CSS via npm or yarn. First, create a
+                new project, and then install Tailwind CSS as a dependency using
+                npm or yarn.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item bg-white rounded-lg shadow-md mb-4 w">
+          <div
+            class="px-6 py-4 accordion-trigger flex justify-between items-center"
+          >
+            <h2 class="text-lg font-semibold accordion-title">
+              Can I customize Tailwind CSS?
+            </h2>
+            <svg
+              class="w-6 h-6 toggle-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+          <div class="accordion-content bg-white">
+            <div class="px-6 py-4">
+              <p class="text-purple-700">
+                Yes, Tailwind CSS is highly customizable. You can configure
+                various aspects of the framework, including colors, spacing,
+                typography, and more, using the configuration file.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-purple-700 text-white py-4">
+      <div
+        class="container mx-auto max-w-screen-xl px-4 justify-between items-center grid grid-cols-5 gap-4"
+      >
+        <div class="col-span-5 lg:col-span-3">
+          <div class="mb-5">
+            <img src="images/White Logo.png " class="w-56 h-6" />
+          </div>
+          <div>
+            <p class="text-sm">
+              Your goal is our target. Not anything in between. We use online
+              marketing platforms and tools to achieve single objective - your
+              business results.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-5 md:col-span-2 lg:col-span-1">
+          <div>
+            <h1 class="font-semibold text-2xl mb-5">Our Technologies</h1>
+          </div>
+          <ul class="flex flex-col">
+            <li class="font-Inter font-medium text-sm mb-1">ReactJS</li>
+            <li class="font-Inter font-medium text-sm mb-1">Gastby</li>
+            <li class="font-Inter font-medium text-sm mb-1">NextJS</li>
+            <li class="font-Inter font-medium text-sm mb-1">NodeJS</li>
+          </ul>
+        </div>
+        <div class="col-span-5 md:col-span-2 lg:col-span-1">
+          <div><h1 class="font-semibold text-2xl mb-5">Our Services</h1></div>
+          <ul class="flex flex-col">
+            <li class="font-Inter font-medium text-sm mb-1">
+              Social media Marketing
+            </li>
+            <li class="font-Inter font-medium text-sm mb-1">
+              Web & Mobile App <br />Development
+            </li>
+            <li class="font-Inter font-medium text-sm mb-1">
+              Data & Analytics
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center">
+        <div class="mt-6">
+          <hr
+            class="col-span-4 bg-gray-300 mx-auto hr-line"
+            style="border: 1px solid"
+          />
+        </div>
+        <div class="flex justify-center">
+          <p>Privacy Policy | Terms & Conditions</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Add click event listener to each accordion item
+      document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          const parent = trigger.parentNode;
+          const isOpen = parent.classList.contains('open');
+
+          // Close all accordion items
+          document.querySelectorAll('.accordion-item').forEach((item) => {
+            item.classList.remove('open');
+            // Change font color of accordion title and background color of accordion content when closing
+            item
+              .querySelector('.accordion-title')
+              .classList.remove('text-black');
+            item
+              .querySelector('.accordion-content')
+              .classList.remove('text-black');
+          });
+
+          // Toggle open class on clicked accordion item
+          if (!isOpen) {
+            parent.classList.add('open');
+            // Change font color of accordion title and background color of accordion content when opening
+            parent
+              .querySelector('.accordion-title')
+              .classList.add('text-purple-700');
+            parent
+              .querySelector('.accordion-content')
+              .classList.add('text-purple-700');
+            trigger.querySelector('.toggle-icon').innerHTML =
+              '<line x1="5" y1="12" x2="19" y2="12"></line>';
+          } else {
+            trigger.querySelector('.toggle-icon').innerHTML =
+              '<line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>';
+          }
+        });
+      });
+    </script>
+    <script>
+      // Toggle menu function
+      function toggleMenu() {
+        const overlayMenu = document.querySelector('.overlay-menu');
+        overlayMenu.classList.toggle('active');
+      }
+
+      // Close menu function
+      function closeMenu() {
+        const overlayMenu = document.querySelector('.overlay-menu');
+        overlayMenu.classList.remove('active');
+      }
+
+      // Add event listeners
+      document
+        .querySelector('.menu-toggle button')
+        .addEventListener('click', toggleMenu);
+      document.querySelector('.close-btn').addEventListener('click', closeMenu);
+    </script>
+  </body>
+</html>

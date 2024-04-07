@@ -1,0 +1,219 @@
+.app-dev {
+  /* Your default styles for the class */
+}
+/* Responsive styles for 1440px */
+@media (max-width: 1440px) {
+  .app-dev {
+    max-width: 1064px; /* Adjust as needed */
+  }
+}
+/* Responsive styles for 1200px */
+@media (max-width: 1200px) {
+  .app-dev {
+    max-width: 896px; /* Adjust as needed */
+  }
+}
+/* Responsive styles for 768px */
+@media (max-width: 768px) {
+  .app-dev {
+    max-width: 688px; /* Adjust as needed */
+  }
+}
+/* Responsive styles for 375px */
+@media (max-width: 375px) {
+  .app-dev {
+    max-width: 335px; /* Adjust as needed */
+    text-align: center;
+  }
+}
+
+.app-dev-2 {
+  /* Your default styles for the class */
+}
+
+/* Responsive styles for 1440px */
+@media (max-width: 1440px) {
+  .app-dev-2 {
+    max-width: 1064px; /* Adjust as needed */
+  }
+}
+
+/* Responsive styles for 1200px */
+@media (max-width: 1200px) {
+  .app-dev-2 {
+    max-width: 896px; /* Adjust as needed */
+  }
+}
+
+/* Responsive styles for 768px */
+@media (max-width: 768px) {
+  .app-dev-2 {
+    max-width: 688px; /* Adjust as needed */
+  }
+}
+
+/* Responsive styles for 375px */
+@media (max-width: 375px) {
+  .app-dev-2 {
+    max-width: 335px; /* Adjust as needed */
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .app-dev-2 .grid-cols-2 {
+    grid-template-columns: 1fr; /* Change to single column layout */
+  }
+
+  .app-dev-2 .col-span-2 {
+    grid-column: auto; /* Reset grid column */
+  }
+
+  .app-dev-2 .col-span-2:nth-child(2) {
+    order: -1; /* Change the order of the second column */
+  }
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+}
+
+/* Container styles */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Logo styles */
+.logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Hamburger menu styles */
+.menu-toggle button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Menu styles */
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-left: 1rem;
+}
+
+.menu a {
+  color: rgb(252, 250, 250);
+  text-decoration: none;
+}
+
+/* Overlay menu styles */
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(248, 245, 245, 0.9); /* Semi-transparent black */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 1000; /* Ensure the menu appears on top of other content */
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.overlay-menu.active {
+  transform: translateX(0);
+}
+
+/* Close button styles */
+.close-btn {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Menu items styles */
+.overlay-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-menu ul li {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.overlay-menu ul li a {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.textBox {
+  position: relative;
+}
+/* Media query for screens smaller than 768px */
+/* @media (max-width: 767px) {
+  .textBox .absolute {
+    position: static;
+    max-width: 100%;
+  }
+
+  .textBox h2,
+  .textBox button {
+    display: block;
+    width: 100%;
+  }
+} */
+@media (max-width: 767px) {
+  .textBox .absolute {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+}
+
+.hr-line {
+  /* Your default styles for the class */
+}
+/* Responsive styles for 1440px */
+@media (max-width: 1440px) {
+  .hr-line {
+    max-width: 630px; /* Adjust as needed */
+  }
+}
+/* Responsive styles for 1200px */
+@media (max-width: 1200px) {
+  .hr-line {
+    max-width: 630px; /* Adjust as needed */
+  }
+}
+/* Responsive styles for 768px */
+@media (max-width: 768px) {
+  .hr-line {
+    max-width: 630px; /* Adjust as needed */
+  }
+}
+/* Responsive styles for 375px */
+@media (max-width: 375px) {
+  .hr-line {
+    max-width: 335px; /* Adjust as needed */
+  }
+}
